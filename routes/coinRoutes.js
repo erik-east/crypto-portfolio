@@ -5,5 +5,6 @@ const requireLogin = require('../middlewares/requireLogin');
 const CoinService = require('../services/coin');
 
 router.get('/coinList', requireLogin, CoinService.coinList);
+router.post('/addCoin', requireLogin, CoinService.addCoin);
 
 module.exports = router;
