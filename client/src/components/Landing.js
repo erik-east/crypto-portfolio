@@ -4,9 +4,9 @@ const Landing = () => {
     return (
         <div style={{ textAlign: 'center'}}>
             <h1>
-                Product Logo
+                Crypto Portfolio
             </h1>
-            Tell your visitors what is the product for here!
+            Manage your portfolio swiftly and painlessly
         </div>
     );
 };
