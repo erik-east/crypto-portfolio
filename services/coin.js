@@ -1,4 +1,5 @@
-const Coin = require('../models/Coin');
+const mongoose = require('mongoose');
+const Coin = mongoose.model('coins');
 
 exports.coinList = async (req, res, next) => {
   try {
