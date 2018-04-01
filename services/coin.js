@@ -11,9 +11,8 @@ exports.coinList = async (req, res, next) => {
   }
 };
 
-exports.addCoin = async (req, res, next) => {
-  const {symbol, quantity} = req.body;
-
+exports.addCoin = async (req, res) => {
+  const { symbol, quantity } = req.body;
   try {
     const query = await User.bulkWrite(
        [
@@ -41,7 +40,8 @@ exports.addCoin = async (req, res, next) => {
            }
          }
        ]);
-    const user = await User.findOne({_id: req.user._id });
+
+    const user = await User.findOne({ _id: req.user._id });
     res.status(200).send(user);
   } catch (err) {
     res.status(400).send(err);

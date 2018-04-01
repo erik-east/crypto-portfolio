@@ -33,8 +33,8 @@ class CoinList extends Component {
                     <tr>
                         <th>Name</th>
                         <th className="center-align">Symbol</th>
-                        <th className="right-align">Price (USD)</th>
-                        <th className="right-align">Price (BTC)</th>
+                        <th className="right-align">Price ($)</th>
+                        <th className="right-align">Price ($)</th>
                         <th>Change (1hr)</th>
                         <th>Change (24h)</th>
                         <th>Change (7d)</th>
