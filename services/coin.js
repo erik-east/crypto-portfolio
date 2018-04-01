@@ -28,7 +28,7 @@ exports.addCoin = async (req, res) => {
          },
          {
            updateOne: {
-             filter: { _id: req.user._id, "portfolio.symbol": { $exists: false }},
+             filter: { _id: req.user._id, "portfolio.symbol": { $ne: symbol }},
              update: {
                $addToSet: {
                  portfolio: {

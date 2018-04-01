@@ -5,7 +5,6 @@ module.exports = app => {
   app.use('/auth',require('./authRoutes'));
   app.use('/api/coin',require('./coinRoutes'));
 
-
   // user routes
   app.get('/api/logout', (req, res) => {
     req.logout();
