@@ -8,7 +8,7 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const fetchCoinList = () => async dispatch => {
-    const res = await axios.get('/api/coinList');
+    const res = await axios.get('/api/coin/coinList');
 
     dispatch({ type: FETCH_COIN_LIST, payload: res.data });
 };
