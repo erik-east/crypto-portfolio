@@ -12,8 +12,8 @@ class CoinList extends Component {
     renderCoinList() {
         return this.props.coinList.map(coin => {
             return (
-                <tr key={coin.id}>
-                    <td>{coin.id}</td>
+                <tr key={coin.name}>
+                    <td>{coin.name}</td>
                     <td className="center-align">{coin.symbol}</td>
                     <td className="right-align">{coin.price_usd} $</td>
                     <td className="right-align">{coin.price_btc} BTC</td>
