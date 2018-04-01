@@ -9,7 +9,7 @@ const coinSchema = new Schema({
   percent_change_1h : Number,
   percent_change_24h : Number,
   percent_change_7d : Number,
-  last_updated : Number
+  last_updated : Date
 });
 
 mongoose.model('coins', coinSchema);
