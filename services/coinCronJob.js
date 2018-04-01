@@ -13,7 +13,7 @@ module.exports = CronJob => {
       }
       const coins = req.data;
       const tasks = [];
-      for (let {name, symbol, price_usd} of coins) {
+      for (let {name, symbol, price_usd, price_btc, percent_change_1h, percent_change_24h, percent_change_7d, last_updated} of coins) {
         tasks.push(Coin.update({symbol}, {
           name,
           symbol,
