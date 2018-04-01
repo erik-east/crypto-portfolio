@@ -5,6 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User');
+require('./models/Coin');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -39,3 +40,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
+
+require('./services/coin').startCoinCronJob();
+
+
