@@ -1,24 +1,8 @@
-const passport = require('passport');
+const express = require('express');
+const router = express.Router();
+const PassportService = require('../services/passport');
 
-module.exports = app => {
-    app.get('/auth/google', passport.authenticate('google', {
-        scope: ['profile', 'email']
-    }));
+router.get("/google", PassportService.authenticate);
+router.get("/google/callback", PassportService.authenticateCallback, (req, res) => {res.redirect('/portfolio')});
 
-    app.get(
-        "/auth/google/callback",
-        passport.authenticate('google'),
-        (req, res) => {
-            res.redirect('/portfolio');
-        }
-    );
-
-    app.get('/api/logout', (req, res) => {
-        req.logout();
-        res.redirect('/');
-    });
-
-    app.get('/api/current_user', (req, res) => {
-        res.send(req.user);
-    });
-};
+module.exports = router;
