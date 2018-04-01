@@ -7,7 +7,7 @@ exports.coinList = async (req, res, next) => {
     const coins = await Coin.find({});
     res.status(200).send(coins);
   } catch (err) {
-    next(err)
+    res.status(400).send(err);
   }
 };
 
@@ -44,6 +44,6 @@ exports.addCoin = async (req, res, next) => {
     const user = await User.findOne({_id: req.user._id });
     res.status(200).send(user);
   } catch (err) {
-    next(err)
+    res.status(400).send(err);
   }
 };
