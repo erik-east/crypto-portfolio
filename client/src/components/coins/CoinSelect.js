@@ -13,6 +13,7 @@ const CoinSelect = ({ newCoin, coinOptions, updateCurrencyType }) => {
             value={value}
             onChange={(selectedOption) => updateCurrencyType(selectedOption)}
             searchable
+            clearable
             options={coinOptions}
         />
     );
