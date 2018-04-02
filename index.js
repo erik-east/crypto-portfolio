@@ -28,7 +28,7 @@ app.use(passport.session());
 require('./routes')(app);
 
 // Cron Jon
-require('./services/coinCronJob')(CronJob);
+// require('./services/coinCronJob')(CronJob);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
