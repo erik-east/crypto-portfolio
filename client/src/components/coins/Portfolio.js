@@ -47,8 +47,8 @@ class Portfolio extends Component {
     }
 }
 
-function mapStateToProps({ auth, portfolio }) {
-    return { auth, portfolio };
+function mapStateToProps({ portfolio }) {
+    return { portfolio };
 }
 
 export default connect(mapStateToProps, { fetchPortfolio })(Portfolio);
